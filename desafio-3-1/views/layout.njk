@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block head %}
+        <title> Blog - Rocketseat</title>
+    {% endblock %}
+
+    <link href=rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/rocketseat.css">
+    <link rel="stylesheet" href="/blog.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/blog" class="content-blog">Conteúdo</a>
+            <a href="/about" class="content-blog">Sobre</a>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>
