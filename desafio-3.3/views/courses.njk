@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Courses - Rocketseat</title>
+{% endblock %}
+<!-- esse bloco vai ser enviado para o layout mas so sera carregado nessa pagina -->
+
+{% block content %}
+
+
+    <div id="wrapper">
+        <h1>Courses</h1>
+    </div>
+
+      <section class="cards">
+
+        {% for item in items %}
+        <div class="card" id="construindo-um-app-com-mapas-usando-react-native-maps-e-mapbox/">
+            <div class="card__image-container">
+                <img src="{{item.id}}" alt="Imagem de {{item.content}}">
+            </div>
+
+            <div class="card__content">
+                <p>{{item.content}}</p>
+            </div>
+
+            <div class="card__info">
+                <p>{{item.duration}}</p>
+                <p>{{item.info}}</p>              
+            </div>            
+        </div>
+        {% endfor %}
+
+    </section>
+
+
+    <script src="scripts.js"></script>
+
+{% endblock %}
