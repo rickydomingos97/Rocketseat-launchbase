@@ -1,0 +1,61 @@
+{# {% extends "layout.njk" %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>{{item.content}} - Rocketseat</title>
+{% endblock %}
+<!-- esse bloco vai ser enviado para o layout mas so sera carregado nessa pagina -->
+
+{% block content %}
+
+    <div id="wrapper">
+        <h1>{{item.id}}</h1>
+       WELCOME SEJA BEM VINDO
+    </div>
+
+    <section class="iframe">
+
+        {% for item in items %}
+            <div class="frame">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        {% endfor %}
+
+    </section>
+
+{% endblock %} #}
+
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>{{item.id}}
+        - Rocketseat</title>
+{% endblock %}
+<!-- esse bloco vai ser enviado para o layout mas so sera carregado nessa pagina -->
+
+{% block content %}
+    <section class="mycourse">
+        <div class="wrapper-course course">
+            <img src="{{item.image}}" alt="">
+            <div class="course-content">
+                <h1>{{item.title}}</h1>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+
+        
+        <div class="community">
+            <a href="https://www.discord.com/" target="_blank">
+                <img src="{{item.communitylogo}}" alt="imagem de logo rocketseat">
+            </a>
+            
+            <div class="community-content">
+                <h1>Comunidade</h1>
+                <p>Se conecte com milhares de devs em uma comunidade incrivel em busca do proximo nivel</p>
+            </div>
+        </div>
+        
+    </section>
+
+{% endblock %}
